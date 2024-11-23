@@ -23,6 +23,8 @@ class PackageController extends Controller
         $stores = Store::where('store_status', 1)->get();
         $users = Client::where('client_status', 1)->get();
         return view('package.package_lists', compact('packages', 'stores', 'users'));
+
+        
     }
     public function searchStores(Request $request)
     {
